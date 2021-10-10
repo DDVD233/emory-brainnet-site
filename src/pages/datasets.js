@@ -15,7 +15,7 @@ const IndexPage = ({ data }) => {
 
 export default IndexPage
 export const pageQuery = graphql`
-    query IndexQuery {
+    query DatasetsPageQuery {
         mdx(fileAbsolutePath: {regex: "/posts/datasets.mdx/"}) {
             body
         }
