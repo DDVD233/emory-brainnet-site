@@ -8,6 +8,7 @@ import {
 import { StyledEngineProvider } from '@mui/material/styles'
 import React from 'react'
 import LogoIcon from './LogoIcon'
+import 'katex/dist/katex.min.css'
 
 const BarLink = styled(Link)({
   textDecoration: 'none'
