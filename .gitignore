@@ -1,1 +1,4 @@
 node_modules
+schema.graphql
+.cache
+public
