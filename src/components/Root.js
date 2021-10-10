@@ -2,12 +2,16 @@ import {
   AppBar, Box,
   Button,
   CssBaseline, IconButton, Link,
-  ScopedCssBaseline,
-  Toolbar
+  ScopedCssBaseline, styled,
+  Toolbar, Typography
 } from '@mui/material'
 import { StyledEngineProvider } from '@mui/material/styles'
 import React from 'react'
 import LogoIcon from './LogoIcon'
+
+const BarLink = styled(Link)({
+  textDecoration: 'none'
+})
 
 export const Root = ({ element }) => {
   return (
@@ -17,14 +21,25 @@ export const Root = ({ element }) => {
         <AppBar position="static">
           <Toolbar>
             <IconButton color="inherit">
-              <Link href='/' align='center'>
-                <LogoIcon/>
-              </Link>
+              <BarLink href="/" align="center"
+                       style={{ display: 'flex', alignItems: 'center' }}>
+                <LogoIcon width={35} height={35}/>
+              </BarLink>
             </IconButton>
+            <Typography sx={{ flexGrow: 1 }}>
+
+            </Typography>
             <Button color="inherit">
-              <Link href="/get-started" color="inherit">
+              <BarLink href="/get-started"
+                       color="inherit">
                 Gat Started
-              </Link>
+              </BarLink>
+            </Button>
+            <Button color="inherit">
+              <BarLink color="inherit"
+                       href="/datasets">
+                Datasets
+              </BarLink>
             </Button>
           </Toolbar>
         </AppBar>
