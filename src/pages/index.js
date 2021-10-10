@@ -1,6 +1,5 @@
 import React from 'react'
 import { Box } from '@mui/material'
-import '../styles/index.css'
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 

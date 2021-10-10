@@ -1,10 +1,11 @@
 const React = require('react')
 const { StyledEngineProvider } = require('@mui/material/styles')
-const { Box, ScopedCssBaseline, Toolbar, Button, Link, AppBar } = require('@mui/material')
+const { Box, ScopedCssBaseline, Toolbar, Button, Link, AppBar, CssBaseline } = require('@mui/material')
 
 const Layout = ({ children }) => {
   return (
     <>
+      <CssBaseline/>
       <AppBar position="static">
         <Toolbar>
           <Button color="inherit">
