@@ -15,7 +15,8 @@ const headerHeight = '400px'
 
 const useStyles = makeStyles({
   title: {
-    '&:before': {
+    '&:after': {
+      zIndex: 1,
       content: '""',
       position: 'absolute',
       height: headerHeight,
@@ -49,12 +50,12 @@ const IndexPage = ({ data }) => {
         spacing={3}
         className={classes.title}
       >
-        <Grid item>
+        <Grid zIndex={2} item>
           <Typography variant={isSmallScreen ? 'h3' : 'h1'} textAlign="left">
             Brain Network
           </Typography>
         </Grid>
-        <Grid>
+        <Grid zIndex={2} item>
           <Button
             variant="contained"
             component="a"
