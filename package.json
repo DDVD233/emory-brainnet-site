@@ -30,6 +30,7 @@
     "gatsby-remark-images": "^5.11.0",
     "gatsby-remark-katex": "^5.11.0",
     "gatsby-source-filesystem": "^3.14.0",
+    "gatsby-theme-material-ui": "^5.0.0",
     "gatsby-transformer-remark": "^4.11.0",
     "gatsby-transformer-sharp": "^3.14.0",
     "katex": "^0.13.18",

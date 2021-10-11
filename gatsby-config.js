@@ -13,6 +13,7 @@ module.exports = {
         icon: 'src/images/emu-logo.svg'
       }
     },
+    'gatsby-theme-material-ui',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
