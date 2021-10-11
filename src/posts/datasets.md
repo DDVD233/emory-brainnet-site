@@ -1,6 +1,6 @@
 ## Human Immunodeficiency Virus Infection (HIV)
 
-![BP Sample](images/BP-Sample.png '#float=right;width=150px;')
+![BP Sample](images/BP-Sample.png '#float=right;width=240px;')
 
 Human Immunodeficiency Virus Infection (HIV) is collected from functional magnetic resonance imaging (fMRI), including 35 samples from patients (positive) and 35 healthy controls (negative). Each graph contains 90 nodes (ROIs) and the edge weights corresponding to the adjacency matrix are calculated as the correlations between brain regions.
 
