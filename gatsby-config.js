@@ -13,6 +13,8 @@ module.exports = {
         icon: 'src/images/emu-logo.svg'
       }
     },
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -23,12 +25,23 @@ module.exports = {
               // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
               strict: `ignore`
             }
+          },
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              backgroundColor: 'none',
+              disableBgImage: true
+            }
+          },
+          {
+            resolve: `gatsby-remark-image-attributes`,
+            options: {
+              dataAttributes: true
+            }
           }
         ]
       }
     },
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
