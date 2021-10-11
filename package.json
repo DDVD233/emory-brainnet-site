@@ -26,6 +26,7 @@
     "gatsby-plugin-react-helmet": "^4.14.0",
     "gatsby-plugin-sharp": "^3.14.1",
     "gatsby-plugin-sitemap": "^4.10.0",
+    "gatsby-plugin-typography": "^3.14.0",
     "gatsby-remark-image-attributes": "^1.0.1",
     "gatsby-remark-images": "^5.11.0",
     "gatsby-remark-katex": "^5.11.0",
@@ -39,7 +40,10 @@
     "prismjs": "^1.25.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "react-typography": "^0.16.20",
+    "typography": "^0.16.21",
+    "typography-theme-alton": "^0.16.19"
   },
   "devDependencies": {
     "graphql-cli": "^4.1.0"

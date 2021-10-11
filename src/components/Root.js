@@ -12,7 +12,7 @@ import { ThemeProvider } from '@mui/styles'
 import { Helmet } from 'react-helmet'
 
 import 'katex/dist/katex.min.css'
-import 'prism-themes/themes/prism-one-dark.min.css'
+import 'prismjs/themes/prism-solarizedlight.css'
 
 export const Root = ({ element }) => {
   return (
