@@ -3,7 +3,9 @@ import LogoSvg from '../images/emu-logo.svg'
 
 export const LogoIcon = (props) => {
   return (
-    <img {...props} alt="logo" src={LogoSvg}/>
+    <img {...props} style={{
+      margin: 'auto'
+    }} alt="logo" src={LogoSvg}/>
   )
 }
 export default LogoIcon

@@ -32,9 +32,8 @@ export const Root = ({ element }) => {
           <AppBar component="nav" position="sticky">
             <Toolbar>
               <IconButton color="inherit"
-                          href="/"
-                          style={{ display: 'flex', alignItems: 'center' }}>
-                <LogoIcon width={35} height={35}/>
+                          href="/">
+                <LogoIcon width={50} height={50}/>
               </IconButton>
               <Typography sx={{ flexGrow: 1 }}/>
               <Button color="inherit" href="/get-started">
