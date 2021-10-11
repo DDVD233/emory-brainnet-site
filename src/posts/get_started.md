@@ -10,7 +10,7 @@ The first approach is recommended.
 
 To install the brain network package using pip, simply type:
 
-```
+```shell
 pip install brain-network
 ```
 
@@ -22,13 +22,13 @@ Brain network package comes with 2 brain network datasets. The information for e
 
 To load a dataset, first load the dataset class.
 
-```
+```python
 from BrainNet.BrainDataset import BrainDataset
 ```
 
 Then you can load each dataset through the following commands:
 
-```
+```python
 hiv_dataset = BrainDataset(root='datasets/', name='HIV')  # load HIV dataset
 bp_dataset = BrainDataset(root='datasets/', name='BP')  # load BP dataset
 ```
@@ -37,7 +37,7 @@ The `BrainDataset` initializer takes two arguments, root and name. `root` is the
 
 You can also apply some pre-transformation as a part of the initializing process:
 
-```
+```python
 # load BP dataset with pre_transform
 bp_dataset = BrainDataset(root='datasets/', name='BP', 
                           pre_transform=FromSVTransform(Node2Vec(num_workers=8)))
@@ -46,7 +46,8 @@ bp_dataset = BrainDataset(root='datasets/', name='BP',
 The variable `dataset.data` stores the structured torch-geometric dataset. You can use it to train your model. 
 
 Putting it all together:
-```
+
+```python
 from BrainNet.BrainDataset import BrainDataset
 
 bp_dataset = BrainDataset(root='datasets/', name='BP', 
