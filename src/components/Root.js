@@ -8,9 +8,11 @@ import {
 import { StyledEngineProvider } from '@mui/material/styles'
 import React from 'react'
 import LogoIcon from './LogoIcon'
-import 'katex/dist/katex.min.css'
 import { ThemeProvider } from '@mui/styles'
 import { Helmet } from 'react-helmet'
+
+import 'katex/dist/katex.min.css'
+import 'prism-themes/themes/prism-one-dark.min.css'
 
 export const Root = ({ element }) => {
   return (

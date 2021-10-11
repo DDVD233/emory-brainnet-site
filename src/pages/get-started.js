@@ -2,7 +2,7 @@ import React from 'react'
 import { Container } from '@mui/material'
 import { graphql } from 'gatsby'
 
-const IndexPage = ({ data }) => {
+const GetStarted = ({ data }) => {
     return (
         <Container component="article" dangerouslySetInnerHTML={{
             __html: data.markdownRemark.html
@@ -10,7 +10,7 @@ const IndexPage = ({ data }) => {
     )
 }
 
-export default IndexPage
+export default GetStarted
 export const pageQuery = graphql`
     query GetStartedPageQuery {
         markdownRemark(fileAbsolutePath: {regex: "/posts/get_started.md$/"}) {
