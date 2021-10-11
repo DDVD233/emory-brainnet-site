@@ -4,11 +4,9 @@ import { graphql } from 'gatsby'
 
 const IndexPage = ({ data }) => {
   return (
-    <Box component="article">
-      <html dangerouslySetInnerHTML={{
-        __html: data.markdownRemark.html
-      }}/>
-    </Box>
+    <Box component="article" dangerouslySetInnerHTML={{
+      __html: data.markdownRemark.html
+    }}/>
   )
 }
 
