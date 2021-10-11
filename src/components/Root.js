@@ -27,7 +27,7 @@ export const Root = ({ element }) => {
         </Helmet>
         <ScopedCssBaseline>
           <CssBaseline/>
-          <AppBar position="static">
+          <AppBar component="nav" position="sticky">
             <Toolbar>
               <IconButton color="inherit"
                           href="/"
@@ -43,11 +43,15 @@ export const Root = ({ element }) => {
               </Button>
             </Toolbar>
           </AppBar>
-          <Toolbar/>
           <Box component="main">
             {element}
           </Box>
-          <Grid container flexDirection="column" alignItems="center">
+          <Grid
+            component="footer"
+            container
+            flexDirection="column"
+            alignItems="center"
+          >
             <Grid item>
               <Typography variant="caption" textAlign="center">
                 Brain Network 2021 | Powered by Gatsby

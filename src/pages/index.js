@@ -45,6 +45,7 @@ const IndexPage = ({ data }) => {
         justifyContent="center"
         alignItems="center"
         minHeight={headerHeight}
+        marginTop={0}
         spacing={3}
         className={classes.title}
       >
