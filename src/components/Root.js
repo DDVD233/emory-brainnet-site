@@ -44,6 +44,7 @@ export const Root = ({ element }) => {
               </Button>
             </Toolbar>
           </AppBar>
+          <Toolbar/>
           <Box component="main">
             {element}
           </Box>
