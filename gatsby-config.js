@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     siteUrl: 'https://www.yourdomain.tld',
-    title: 'emory-brainnet-site'
+    title: 'Brain Network'
   },
   plugins: [
     'gatsby-plugin-image',

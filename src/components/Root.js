@@ -27,9 +27,7 @@ export const Root = ({ element }) => {
                 <LogoIcon width={35} height={35}/>
               </BarLink>
             </IconButton>
-            <Typography sx={{ flexGrow: 1 }}>
-
-            </Typography>
+            <Typography sx={{ flexGrow: 1 }}/>
             <Button color="inherit">
               <BarLink href="/get-started"
                        color="inherit">
