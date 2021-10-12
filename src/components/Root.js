@@ -37,7 +37,7 @@ export const Root = ({ element }) => {
               </IconButton>
               <Typography sx={{ flexGrow: 1 }}/>
               <Button color="inherit" href="/get-started">
-                Gat Started
+                Get Started
               </Button>
               <Button color="inherit" href="/datasets">
                 Datasets
