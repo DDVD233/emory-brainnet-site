@@ -11,7 +11,7 @@ import { graphql } from 'gatsby'
 
 import headerImage from '../images/header-image.svg'
 
-const headerHeight = '400px'
+const headerHeight = '500px'
 
 const useStyles = makeStyles({
   title: {

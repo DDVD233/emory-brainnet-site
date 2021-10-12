@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 
 const IndexPage = ({ data }) => {
   return (
-    <Container maxWidth='sm' component="article" dangerouslySetInnerHTML={{
+    <Container maxWidth='md' component="article" dangerouslySetInnerHTML={{
       __html: data.markdownRemark.html
     }}/>
   )
