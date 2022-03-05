@@ -10,7 +10,7 @@
   - Image processing toolbox
   - [Tools for NIfTI and ANALYZE image](https://www.mathworks.com/matlabcentral/fileexchange/8797-tools-for-nifti-and-analyze-image) (NIfTI)
 ## Step 1: Preprocessing with FSL
-- Preprodcess the DTI data  
+- Preprocess the DTI data  
 **eg:** 3101.nii.gz
 ```bash
 # to correct for eddy current distortion and motion distortion
