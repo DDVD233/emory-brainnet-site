@@ -39,6 +39,9 @@ export const Root = ({ element }) => {
               <Button color="inherit" href="/get-started">
                 Get Started
               </Button>
+              <Button color="inherit" href="/dti-instructions">
+                Instructions
+              </Button>
               <Button color="inherit" href="/datasets">
                 Datasets
               </Button>
