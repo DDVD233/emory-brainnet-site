@@ -14,7 +14,6 @@ import { Helmet } from 'react-helmet'
 
 import 'katex/dist/katex.min.css'
 import 'prismjs/themes/prism-solarizedlight.css'
-import LogoSvg from "../images/CBIS_logo_white.png";
 
 export const Root = ({ element }) => {
   return (
@@ -43,7 +42,10 @@ export const Root = ({ element }) => {
                 Get Started
               </Button>
               <Button color="inherit" href="/dti-instructions">
-                Instructions
+                DTI Instructions
+              </Button>
+              <Button color="inherit" href="/dti-instructions">
+                FMRI Instructions
               </Button>
               <Button color="inherit" href="/datasets">
                 Datasets
