@@ -1,5 +1,5 @@
 import React from 'react'
-import LogoSvg from '../images/emu-logo.svg'
+import LogoSvg from '../images/CBIS_logo_white.png'
 
 export const LogoIcon = (props) => {
   return (

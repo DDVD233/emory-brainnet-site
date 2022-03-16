@@ -8,11 +8,13 @@ import {
 import { StyledEngineProvider } from '@mui/material/styles'
 import React from 'react'
 import LogoIcon from './LogoIcon'
+import CSLogoIcon from "./CSLogoIcon";
 import { ThemeProvider } from '@mui/styles'
 import { Helmet } from 'react-helmet'
 
 import 'katex/dist/katex.min.css'
 import 'prismjs/themes/prism-solarizedlight.css'
+import LogoSvg from "../images/CBIS_logo_white.png";
 
 export const Root = ({ element }) => {
   return (
@@ -33,7 +35,8 @@ export const Root = ({ element }) => {
             <Toolbar>
               <IconButton color="inherit"
                           href="/">
-                <LogoIcon width={50} height={50}/>
+                <CSLogoIcon width={238} height={50}/>
+                <LogoIcon width={154} height={50}/>
               </IconButton>
               <Typography sx={{ flexGrow: 1 }}/>
               <Button color="inherit" href="/get-started">
