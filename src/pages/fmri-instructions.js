@@ -13,7 +13,7 @@ const FmriInstructions = ({ data }) => {
 export default FmriInstructions
 export const pageQuery = graphql`
     query FmriInstructionsPageQuery {
-        markdownRemark(fileAbsolutePath: {regex: "/posts/fmri_instructions.md$/"}) {
+        markdownRemark(fileAbsolutePath: {regex: "/posts/fmri_instruction.md$/"}) {
             html
         }
     }
