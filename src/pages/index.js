@@ -52,7 +52,7 @@ const IndexPage = ({ data }) => {
       >
         <Grid zIndex={2} item>
           <Typography variant={isSmallScreen ? 'h3' : 'h1'} textAlign="left">
-            Brain Network
+            BrainGB
           </Typography>
         </Grid>
         <Grid zIndex={2} item>
