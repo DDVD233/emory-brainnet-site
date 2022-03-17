@@ -2,7 +2,7 @@
 
 To facilitate brain network research, the Emory Brain Network Group provides multiple ways to construct brain network as well as an out-of-box package for performance testing on brain networks. 
 
-The description of each dataset can be found [here](/datasets).
+A list of some publicly available datasets can be found [here](/datasets).
 
 # Contribution
 
