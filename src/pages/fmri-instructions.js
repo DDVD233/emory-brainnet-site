@@ -1,9 +1,11 @@
 import React from 'react'
-import { Container } from '@mui/material'
+import { Container, ToggleButton, ToggleButtonGroup } from '@mui/material'
 import { graphql } from 'gatsby'
 
 const FmriInstructions = ({ data }) => {
     return (
+        // TODO: Switch between the different instructions
+
         <Container component="article" dangerouslySetInnerHTML={{
             __html: data.markdownRemark.html
         }}/>
