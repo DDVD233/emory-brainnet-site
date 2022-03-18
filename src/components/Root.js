@@ -1,6 +1,6 @@
 import {
   AppBar, Box,
-  Button, createTheme,
+  Button,
   CssBaseline, Grid, IconButton,
   ScopedCssBaseline,
   Toolbar, Typography
@@ -14,11 +14,12 @@ import { Helmet } from 'react-helmet'
 
 import 'katex/dist/katex.min.css'
 import 'prismjs/themes/prism-solarizedlight.css'
+import theme from "../theme";
 
 export const Root = ({ element }) => {
   return (
     <StyledEngineProvider injectFirst>
-      <ThemeProvider theme={createTheme()}>
+      <ThemeProvider theme={theme}>
         <Helmet>
           <link
             rel="stylesheet"
@@ -32,8 +33,8 @@ export const Root = ({ element }) => {
           <CssBaseline/>
           <AppBar component="nav" position="sticky">
             <Toolbar>
-              <IconButton color="inherit"
-                          href="/">
+              <Grid container alignItems="center">
+              <IconButton href="/" style={{ borderRadius: 2}}>
                 <CSLogoIcon width={238} height={50}/>
                 <LogoIcon width={154} height={50}/>
               </IconButton>
@@ -53,6 +54,7 @@ export const Root = ({ element }) => {
               <Button color="inherit" href="/team">
                 team
               </Button>
+              </Grid>
             </Toolbar>
           </AppBar>
           <Toolbar/>

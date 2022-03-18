@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Divider } from '@mui/material'
+import { Container, Divider, Grow, Grid } from '@mui/material'
 import PersonCard from '../components/PersonCard'
 
 const TeamPage = () => {
@@ -23,6 +23,7 @@ const TeamPage = () => {
                   email="j.carlyang@emory.edu"
                   photo=""
                   position="Director"
+                  link="https://www.cs.emory.edu/~jyang71/"
               />
           </div>
 
@@ -36,14 +37,46 @@ const TeamPage = () => {
 
         <h2>Students</h2>
 
-        <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', width: '100%'}}>
-            <PersonCard
-                name="Hejie Cui"
-                email="hejie.cui@emory.edu"
-                photo=""
-                position="PhD Student"
-            />
-        </div>
+        <Grow
+            in={true}
+            style={{ transformOrigin: '0 0 0' }}
+            {...{ timeout: 500 }}
+        >
+
+            <Grid container spacing={3} justifyContent={'center'}>
+                <PersonCard
+                    name="Hejie Cui"
+                    email="hejie.cui@emory.edu"
+                    photo=""
+                    position="PhD Student in Computer Science"
+                    link={'https://hejiecui.com/'}
+                />
+
+                <PersonCard
+                    name="Wei Dai"
+                    email="wei.dai@emory.edu"
+                    photo=""
+                    position="Bachelor Student in Computer Science and Mathematics"
+                    link={'https://dd.works/'}
+                />
+
+                <PersonCard
+                    name="Yanqiao Zhu"
+                    email="yanqiao.zhu@cripac.ia.ac.cn"
+                    photo=""
+                    position="Master Student in Computer Science"
+                    link={'https://sxkdz.github.io/'}
+                />
+
+                <PersonCard
+                    name="Xuan Kan"
+                    email="xuan.kan@emory.edu"
+                    photo=""
+                    position="PhD Student in Computer Science"
+                    link={'http://kanxuan.live/'}
+                />
+            </Grid>
+        </Grow>
 
     </Container>
   )

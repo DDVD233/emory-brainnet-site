@@ -14,6 +14,7 @@ module.exports = {
       }
     },
     'gatsby-theme-material-ui',
+    'gatsby-plugin-emotion',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {

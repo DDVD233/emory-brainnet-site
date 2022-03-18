@@ -1,5 +1,5 @@
 import {
-    Paper, Avatar
+    Paper, Avatar, Link
 } from '@mui/material'
 import React from "react";
 import {blue} from "@mui/material/colors";
@@ -17,6 +17,7 @@ export default class PersonCard extends React.Component {
             name: this.props.name,
             email: this.props.email,
             position: this.props.position,
+            link: this.props.link,
         }
     }
 
@@ -48,10 +49,12 @@ export default class PersonCard extends React.Component {
                     marginTop: '30px',
                     marginBottom: '10px',
                 }}/>
-
-                <h2>{this.state.name}</h2>
+                {/* Name with link */}
+                <Link href={this.state.link} target="_blank" rel="noreferrer">
+                    <h2>{this.state.name}</h2>
+                </Link>
                 <p>{this.state.email}</p>
-                <p>{this.state.position}</p>
+                <p align="center">{this.state.position}</p>
             </Paper>
         )
     }
