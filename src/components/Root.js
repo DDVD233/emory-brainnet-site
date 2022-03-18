@@ -44,7 +44,7 @@ export const Root = ({ element }) => {
               <Button color="inherit" href="/dti-instructions">
                 DTI Instructions
               </Button>
-              <Button color="inherit" href="/dti-instructions">
+              <Button color="inherit" href="/fmri-instructions">
                 FMRI Instructions
               </Button>
               <Button color="inherit" href="/datasets">
