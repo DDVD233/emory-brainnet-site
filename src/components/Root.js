@@ -35,8 +35,7 @@ export const Root = ({ element }) => {
             <Toolbar>
               <Grid container alignItems="center">
               <IconButton href="/" style={{ borderRadius: 2}}>
-                <CSLogoIcon width={50} height={50}/>
-                <LogoIcon width={154} height={50}/>
+                <CSLogoIcon width={60} height={60}/>
               </IconButton>
               <Typography sx={{ flexGrow: 1 }}/>
               <Button color="inherit" href="/get-started">
