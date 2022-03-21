@@ -38,13 +38,13 @@ export const Root = ({ element }) => {
                 {/* Horizontally center align */}
                 <Container style={
                   {
-                    alignItems: 'baseline',
+                    alignItems: 'center',
                     display: 'flex',
-                    flexDirection: 'column',
+                    flexDirection: 'row'
                   }
                 }>
                   <CSLogoIcon width={50} height={50}/>
-                  <p style={{color: 'white', marginBottom: '0rem'}}>BrainGB</p>
+                  <p style={{color: 'white', marginBottom: '0rem', fontFamily: 'Courier New', fontWeight: 'bolder'}}>BrainGB</p>
                 </Container>
               </IconButton>
               <Typography sx={{ flexGrow: 1 }}/>

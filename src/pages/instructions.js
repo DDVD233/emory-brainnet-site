@@ -14,8 +14,8 @@ const Instructions = ({ data }) => {
         }
     }
 
-    const [article, setArticle] = useState("Structural")
-    const [html, setHtml] = useState(data.allMarkdownRemark.edges[0].node.html)
+    const [article, setArticle] = useState("Functional")
+    const [html, setHtml] = useState(data.allMarkdownRemark.edges[0].next.html)
     return (
         <Container style={
             {
@@ -40,8 +40,8 @@ const Instructions = ({ data }) => {
                 exclusive
                 onChange={handleChange}
             >
-                <ToggleButton value="Structural">Structural</ToggleButton>
                 <ToggleButton value="Functional">Functional</ToggleButton>
+                <ToggleButton value="Structural">Structural</ToggleButton>
             </ToggleButtonGroup>
 
         <Container component="article" dangerouslySetInnerHTML={{
