@@ -51,7 +51,7 @@ const IndexPage = ({ data }) => {
           alignItems="left"
           display='flex'
           // spacing={3}
-          width='40%'
+          width='50%'
           marginLeft="40px"
           spacing={0}
         >
