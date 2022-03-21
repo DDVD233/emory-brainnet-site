@@ -1,5 +1,5 @@
-# DTI Brain Network Construction
-The DTI Brain Network Construction pipeline is a standardized pipeline for general researchers to build their own structural brain network from diffusion tensor imaging (DTI) MRI data. 
+# Structural Brain Network Construction
+The Structural Brain Network Construction pipeline is a standardized pipeline for general researchers to build their own structural brain network from diffusion tensor imaging (DTI) MRI data. 
 ## Preparation:
 ### System requirement:
 - Linux or MacOS (Intel Core)

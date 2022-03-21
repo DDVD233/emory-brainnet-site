@@ -35,17 +35,18 @@ export const Root = ({ element }) => {
             <Toolbar>
               <Grid container alignItems="center">
               <IconButton href="/" style={{ borderRadius: 2}}>
-                <CSLogoIcon width={60} height={60}/>
+                {/* Horizontally center align */}
+                <Box display="flex" alignItems="stretch" mr={1} sx={{flexDirection: 'row'}}>
+                  <CSLogoIcon width={60} height={60}/>
+                  <p style={{color: 'white'}}>BrainGB</p>
+                </Box>
               </IconButton>
               <Typography sx={{ flexGrow: 1 }}/>
               <Button color="inherit" href="/get-started">
                 Get Started
               </Button>
-              <Button color="inherit" href="/dti-instructions">
-                DTI Instructions
-              </Button>
-              <Button color="inherit" href="/fmri-instructions">
-                FMRI Instructions
+              <Button color="inherit" href="/instructions">
+                Instructions
               </Button>
               <Button color="inherit" href="/datasets">
                 Datasets

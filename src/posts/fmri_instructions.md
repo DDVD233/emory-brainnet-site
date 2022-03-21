@@ -1,5 +1,5 @@
-# fMRI Brain Network Construction
-The fmri brain network construction is a BIDS-formatted fMRI data processing pipeline for general researchers to build their own functional brain network from fMRI data.This pipeline is based on the [ABCD-HCP BIDS fMRI Pipeline](https://github.com/DCAN-Labs/abcd-hcp-pipeline).
+# Functional Brain Network Construction
+The functional brain network construction is a BIDS-formatted fMRI data processing pipeline for general researchers to build their own functional brain network from fMRI data.This pipeline is based on the [ABCD-HCP BIDS fMRI Pipeline](https://github.com/DCAN-Labs/abcd-hcp-pipeline).
 ## Preparation:
 ### System requirement:
 - Linux or MacOS (Intel Core)
