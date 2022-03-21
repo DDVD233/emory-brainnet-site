@@ -25,7 +25,7 @@ const Instructions = ({ data }) => {
                 flexDirection: 'column',
             }
         }>
-            <Container>
+            <Container style={{paddingTop: '20px'}}>
                 <h1>Brain Network Construction Instructions</h1>
 
                 Please select the construction method from the following options:
