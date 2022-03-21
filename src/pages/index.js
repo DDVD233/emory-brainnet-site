@@ -8,6 +8,7 @@ import {
 } from '@mui/material'
 import { makeStyles, useTheme } from '@mui/styles'
 import { graphql } from 'gatsby'
+import Typewriter from "typewriter-effect";
 
 import headerImage from '../images/header-image.svg'
 
@@ -16,15 +17,14 @@ const headerHeight = '500px'
 const useStyles = makeStyles({
   title: {
     '&:after': {
-      zIndex: 1,
       content: '""',
       position: 'absolute',
       height: headerHeight,
       width: '100%',
-      backgroundImage: `url(${headerImage})`,
       opacity: '.45',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center'
+      // backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundColor: '#e3f2fd'
     }
   }
 })
@@ -40,31 +40,50 @@ const IndexPage = ({ data }) => {
       spacing={2}
       container
     >
-      <Grid
-        container
-        flexDirection="column"
-        justifyContent="center"
-        alignItems="center"
-        minHeight={headerHeight}
-        marginTop={0}
-        spacing={3}
-        className={classes.title}
-      >
-        <Grid zIndex={2} item>
-          <Typography variant={isSmallScreen ? 'h3' : 'h1'} textAlign="left">
-            BrainGB
-          </Typography>
-        </Grid>
-        <Grid zIndex={2} item>
-          <Button
-            variant="contained"
-            component="a"
-            href="/get-started"
-          >
-            Get Started
-          </Button>
+      <Grid flexDirection="row" display='flex' style={{ backgroundColor: '#f6fafd'}} container>
+        <Container item style={{width: '40%', margin: "40px"}}>
+          <img src={headerImage} alt="header"/>
+        </Container>
+        <Grid
+          item
+          flexDirection="column"
+          justifyContent="center"
+          alignItems="left"
+          display='flex'
+          // spacing={3}
+          width='40%'
+          marginLeft="40px"
+          spacing={0}
+        >
+          <Grid item style={{
+            fontFamily: 'Courier New',
+            fontWeight: 'bolder',
+            fontSize: '100px',
+            color: '#1e376d',
+          }}>
+            <Typewriter
+                options={{
+                  strings: 'BrainGB',
+                  autoStart: true,
+                  loop: false,
+                }}
+            />
+          </Grid>
+
+          <Grid item>
+            <Button
+              variant="contained"
+              component="a"
+              href="/get-started"
+            >
+              Get Started
+            </Button>
+          </Grid>
         </Grid>
       </Grid>
+
+      <div style={{ height: "20px" }} />
+
       <Grid item>
         <Container component="article" dangerouslySetInnerHTML={{
           __html: data.markdownRemark.html

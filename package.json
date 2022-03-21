@@ -43,6 +43,7 @@
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-typography": "^0.16.20",
+    "typewriter-effect": "^2.18.2",
     "typography": "^0.16.21",
     "typography-theme-alton": "^0.16.19"
   },
