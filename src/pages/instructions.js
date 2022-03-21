@@ -7,14 +7,14 @@ const Instructions = ({ data }) => {
     function handleChange(event, newValue) {
         setArticle(newValue);
         if (newValue === "Structural") {
-            setHtml(data.allMarkdownRemark.edges[0].node.html)
-        } else {
             setHtml(data.allMarkdownRemark.edges[0].next.html)
+        } else {
+            setHtml(data.allMarkdownRemark.edges[0].node.html)
         }
     }
 
     const [article, setArticle] = useState("Functional")
-    const [html, setHtml] = useState(data.allMarkdownRemark.edges[0].next.html)
+    const [html, setHtml] = useState(data.allMarkdownRemark.edges[0].node.html)
     return (
         <Container style={
             {
