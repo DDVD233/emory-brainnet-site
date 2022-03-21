@@ -1,8 +1,7 @@
 import React from 'react'
-import {ariaHidden, Container, ToggleButton, ToggleButtonGroup} from '@mui/material'
+import { Container, ToggleButton, ToggleButtonGroup} from '@mui/material'
 import { graphql } from 'gatsby'
 import { useState } from 'react';
-import {Grid} from "@mui/material";
 
 const Instructions = ({ data }) => {
     function handleChange(event, newValue) {
