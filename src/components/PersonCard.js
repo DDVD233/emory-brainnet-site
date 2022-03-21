@@ -35,8 +35,8 @@ export default class PersonCard extends React.Component {
                 <Avatar
                     src={this.state.photo}
                     sx={{
-                        width: '200px',
-                        height: '200px',
+                        width: '150px',
+                        height: '150px',
                         fontSize: '70px',
                         bgcolor: '#1e376d',
                     }}

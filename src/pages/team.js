@@ -15,17 +15,7 @@ const TeamPage = () => {
         <h1>Team</h1>
         {/* Spacing */}
         <div style={{height: '20px'}}/>
-        <h2>Faculty</h2>
-          {/*  Horizontal align PersonCard */}
-          <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', width: '100%'}}>
-              <PersonCard
-                  name="Carl Yang"
-                  email="j.carlyang@emory.edu"
-                  photo=""
-                  position="Director"
-                  link="https://www.cs.emory.edu/~jyang71/"
-              />
-          </div>
+        {/*  Horizontal align PersonCard */}
 
         <Divider style={
             {
@@ -35,15 +25,13 @@ const TeamPage = () => {
             }
         }/>
 
-        <h2>Students</h2>
-
         <Grow
             in={true}
             style={{ transformOrigin: '0 0 0' }}
-            {...{ timeout: 500 }}
+            {...{ timeout: 1000 }}
         >
 
-            <Grid container spacing={3} justifyContent={'center'}>
+            <Grid container spacing={1} justifyContent={'center'}>
                 <PersonCard
                     name="Hejie Cui"
                     email="hejie.cui@emory.edu"
@@ -74,6 +62,54 @@ const TeamPage = () => {
                     photo=""
                     position="PhD Student in Computer Science"
                     link={'http://kanxuan.live/'}
+                />
+
+                <PersonCard
+                    name="Antonio Aodong Chen Gu"
+                    email="tony.chen.gu@emory.edu"
+                    photo=""
+                    position="Bachelor Student in Computer Science"
+                    link={''}
+                />
+
+                <PersonCard
+                    name="Joshua Lukemire"
+                    email="joshua.lukemire@emory.edu"
+                    photo=""
+                    position="PhD Student in Computer Science"
+                    link={''}
+                />
+
+                <PersonCard
+                    name="Liang Zhan"
+                    email="liang.zhan@pitt.edu"
+                    photo=""
+                    position="Assistant Professor in EECS"
+                    link={'https://www.engineeringx.pitt.edu/People/Faculty/Profiles/Liang-Zhan/'}
+                />
+
+                <PersonCard
+                    name="Lifang He"
+                    email="lih319@lehigh.edu"
+                    photo=""
+                    position="Assistant Professor in Computer Science and Engineering"
+                    link={'https://engineering.lehigh.edu/faculty/lifang-he'}
+                />
+
+                <PersonCard
+                    name="Ying Guo"
+                    email="yguo2@emory.edu"
+                    photo=""
+                    position="Professor in Biostatistics and Bioinformatics"
+                    link={'https://sph.emory.edu/faculty/profile/index.php?FID=ying-guo-629'}
+                />
+
+                <PersonCard
+                    name="Carl Yang"
+                    email="j.carlyang@emory.edu"
+                    photo=""
+                    position="Assistant Professor in Computer Science"
+                    link="https://www.cs.emory.edu/~jyang71/"
                 />
             </Grid>
         </Grow>
