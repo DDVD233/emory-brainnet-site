@@ -40,8 +40,9 @@ const IndexPage = ({ data }) => {
       spacing={2}
       container
     >
-      <Grid flexDirection="row" display='flex' style={{ backgroundColor: '#f6fafd'}} container>
-        <Container item style={{width: '40%', marginBottom: "40px", marginTop: "80px" }}>
+      <Grid flexDirection={isSmallScreen ? "column" : "row"}
+            display='flex' style={{ backgroundColor: '#f6fafd'}} container>
+        <Container item style={{width: isSmallScreen ? '60%': '30%', marginBottom: "20px", marginTop: "80px" }}>
           <img src={headerImage} alt="header"/>
         </Container>
         <Grid
@@ -51,8 +52,9 @@ const IndexPage = ({ data }) => {
           alignItems="left"
           display='flex'
           // spacing={3}
-          width='50%'
+          width={isSmallScreen ? '100%' : '55%'}
           marginLeft="40px"
+          marginBottom="80px"
           spacing={0}
         >
           <Grid item style={{
