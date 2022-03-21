@@ -17,7 +17,8 @@ The Structural Brain Network Construction pipeline is a standardized pipeline fo
 Raw imaging data usually come with eddy current distortion and motion distortion. Therefore, we could use FSL eddy_correct to preprocess the data. Also, for better analysis result, we need to remove unnecessary brain tissue such as bones, dura, air, etc. by creating brain mask.
 - Preprocess the DTI data  
 **eg:** `3101.nii.gz`
-    ```bash
+
+```bash
     # command format: eddy_correct input_image_path output_filename_path index
     # output files: {name}_EC.ecclog, {name}_EC.nii
     eddy_correct 3101.nii.gz 3101_EC 0
@@ -25,7 +26,8 @@ Raw imaging data usually come with eddy current distortion and motion distortion
     # command format: bet input_image_path output_filename_path -m -n -f 0.2
     # output files: {name}_brain_mask.nii.gz
     bet 3101.nii.gz 3101_brain -m -n -f 0.2
-    ```
+```
+
 ## Step 2: Correct gradient table and erode mask
 Since we are using FSL for eddy correct and motion correction, we should create a unique gradient table for every subject. We need to adjust it with the ecclog produced when converting dicom file to nii, and rotate it for further usage.
 <!-- If you have used the FSL GUI for eddy and movement correction (and not ‘eddy’ or ‘dtipreprocess’), then you will need, for each subject, to create individualised gradient tables
@@ -36,16 +38,18 @@ http://jeromemallershandbookofstructuralbrainmrianalysis.yolasite.com/resources/
 - Process with Matlab code `adjust_bvecs.m`  
 - Use the processed DTI's corresponding structural MRI's bvec and bval  
 **eg:** `3101_r.bvec`, `3101_r.bval`, `3101_EC.ecclog` (from Step 1)
-    ```matlab
+
+```matlab
     % command format: adjust_bevecs(.ecclog from Step 1, .bvec prepared, output adjusted {name}.bevc)
     adjust_bvecs('D:\ppmi\3101\3101_EC.ecclog','D:\ppmi\3101\3101_r.bvec','D:\ppmi\3101\3101_adjs.bvec')
-    ```
+```
 
 For better brain tractography result, the high value points at the brian edge should be removed using the erosion.
 <!-- https://brainvisa.info/axon/en/processes/AnaT1toBrainMask.html -->
 - Process with Matlab code `myerode.m`  
 **eg:** 3101_brain_mask.nii.gz (from Step 1)  
-    ```matlab
+    
+```matlab
     % addpath('path to downloaded NIfTI')
     addpath('NIfTI_20140122')
     savepath()
@@ -53,7 +57,7 @@ For better brain tractography result, the high value points at the brian edge sh
     % command format: myerode('path to brain mask generated in Step 1','output brain mask path')
     % output files: {name}_mask.nii
     myerode('D:\ppmi\3101\3101_brain_mask.nii.gz','D:\ppmi\3101\3101_mask.nii')
-    ```
+```
 
 ## Step 3: Generate whole brain tractography
 We need to run the brain tracktography algorithms to find the fiber tracts connecting different brain regions.
