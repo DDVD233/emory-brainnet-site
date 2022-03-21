@@ -1,6 +1,6 @@
 import {
   AppBar, Box,
-  Button,
+  Button, Container,
   CssBaseline, Grid, IconButton,
   ScopedCssBaseline,
   Toolbar, Typography
@@ -36,10 +36,16 @@ export const Root = ({ element }) => {
               <Grid container alignItems="center">
               <IconButton href="/" style={{ borderRadius: 2}}>
                 {/* Horizontally center align */}
-                <Box display="flex" alignItems="stretch" mr={1} sx={{flexDirection: 'row'}}>
-                  <CSLogoIcon width={60} height={60}/>
-                  <p style={{color: 'white'}}>BrainGB</p>
-                </Box>
+                <Container style={
+                  {
+                    alignItems: 'baseline',
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }
+                }>
+                  <CSLogoIcon width={50} height={50}/>
+                  <p style={{color: 'white', marginBottom: '0rem'}}>BrainGB</p>
+                </Container>
               </IconButton>
               <Typography sx={{ flexGrow: 1 }}/>
               <Button color="inherit" href="/get-started">
