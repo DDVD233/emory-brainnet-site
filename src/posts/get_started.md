@@ -1,4 +1,7 @@
-# Get Started - BrainGB
+
+![BrainGB](images/braingb_logo.png)
+
+# Get Started
 
 BrainGB is a python package for testing Graph Neural Networks on Brain Networks.
 
