@@ -12,9 +12,7 @@ const TeamPage = () => {
             flexDirection: 'column',
         }
     }>
-        <h1>Team</h1>
-        {/* Spacing */}
-        <div style={{height: '20px'}}/>
+        <h1 style={{padding: '20px'}}>Team</h1>
         {/*  Horizontal align PersonCard */}
 
         <Divider style={
