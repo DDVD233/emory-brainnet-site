@@ -41,7 +41,7 @@ const IndexPage = ({ data }) => {
       container
     >
       <Grid flexDirection="row" display='flex' style={{ backgroundColor: '#f6fafd'}} container>
-        <Container item style={{width: '40%', margin: "40px"}}>
+        <Container item style={{width: '40%', marginBottom: "40px", marginTop: "80px" }}>
           <img src={headerImage} alt="header"/>
         </Container>
         <Grid
