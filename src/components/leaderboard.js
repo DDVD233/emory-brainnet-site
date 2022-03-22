@@ -51,7 +51,6 @@ function stableSort(array, comparator) {
     return stabilizedThis.map((el) => el[0]);
 }
 
-method, acc, acc_std, auc, auc_std, ref_link, date
 const headCells = [
     {
         id: 'method',
