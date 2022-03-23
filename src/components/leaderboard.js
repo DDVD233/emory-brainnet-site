@@ -75,7 +75,7 @@ const headCells = [
         id: 'acc_std',
         numeric: true,
         disablePadding: false,
-        label: 'Accuracy Std',
+        label: 'Acc Std',
     },
     {
         id: 'auc',
@@ -202,12 +202,12 @@ EnhancedTableToolbar.propTypes = {
 };
 
 export default function EnhancedTable(props) {
-    const [order, setOrder] = React.useState('asc');
+    const [order, setOrder] = React.useState('desc');
     const [orderBy, setOrderBy] = React.useState('auc');
     const [page, setPage] = React.useState(0);
     const [dense, setDense] = React.useState(false);
     const [rowsPerPage, setRowsPerPage] = React.useState(5);
-    const [rows, setRows] = React.useState(props.rows);
+    const [rows, setRows] = React.useState(props.rows['HIV']);
     const [dataset, setDataset] = React.useState("HIV");
 
     const handleRequestSort = (event, property) => {
@@ -231,7 +231,7 @@ export default function EnhancedTable(props) {
 
     const handleDatasetChange = (event) => {
         setDataset(event.target.value);
-        setRows(props.rows);
+        setRows(props.rows[event.target.value]);
     };
 
     // Avoid a layout jump when reaching the last page with empty rows.

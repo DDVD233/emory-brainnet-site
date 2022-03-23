@@ -4,9 +4,20 @@ import EnhancedTable, { createData } from '../components/leaderboard'
 
 const LeaderBoardsPage = () => {
     const [rows, setRows] = React.useState(
-        [
-            createData("Test", 0.92, 0.01, 0.83, 0.03, "", "Feb 22, 2022")
-        ]
+        {
+            'HIV': [
+                createData("Connection Profile-Node Concat w/ attn-Concat Pooling", 71.43, 9.04, 82.04, 11.21, "", "March 12, 2022")
+            ],
+            'PNC': [
+                createData("Connection Profile-Node Concat-Concat Pooling", 70.63, 2.35, 78.32, 1.42, "", "March 12, 2022")
+            ],
+            'PPMI': [
+                createData("Connection Profile-Node Concat-Concat Pooling", 78.41, 1.62, 68.34, 1.89, "", "March 12, 2022")
+            ],
+            'ABCD': [
+                createData("Connection Profile-Node edge concat w/ attn-Concat Pooling", 83.10, 0.47, 91.85,  0.29, "", "Feb 22, 2022")
+            ],
+        }
     )
 
   return (
