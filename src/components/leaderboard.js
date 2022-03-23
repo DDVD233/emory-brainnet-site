@@ -17,7 +17,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
 import { visuallyHidden } from '@mui/utils';
 
-function createData(method, acc, acc_std, auc, auc_std, ref_link, date) {
+export function createData(method, acc, acc_std, auc, auc_std, ref_link, date) {
     return { method, acc, acc_std, auc, auc_std, ref_link, date };
 }
 
@@ -39,23 +39,29 @@ function getComparator(order, orderBy) {
 
 // This method is created for cross-browser compatibility, if you don't
 // need to support IE11, you can use Array.prototype.sort() directly
-function stableSort(array, comparator) {
-    const stabilizedThis = array.map((el, index) => [el, index]);
-    stabilizedThis.sort((a, b) => {
-        const order = comparator(a[0], b[0]);
-        if (order !== 0) {
-            return order;
-        }
-        return a[1] - b[1];
-    });
-    return stabilizedThis.map((el) => el[0]);
-}
+// function stableSort(array, comparator) {
+//     const stabilizedThis = array.map((el, index) => [el, index]);
+//     stabilizedThis.sort((a, b) => {
+//         const order = comparator(a[0], b[0]);
+//         if (order !== 0) {
+//             return order;
+//         }
+//         return a[1] - b[1];
+//     });
+//     return stabilizedThis.map((el) => el[0]);
+// }
 
 const headCells = [
     {
+        id: 'rank',
+        numeric: true,
+        disablePadding: true,
+        label: 'Rank',
+    },
+    {
         id: 'method',
         numeric: false,
-        disablePadding: true,
+        disablePadding: false,
         label: 'Method',
     },
     {
@@ -133,9 +139,7 @@ function EnhancedTableHead(props) {
 }
 
 EnhancedTableHead.propTypes = {
-    numSelected: PropTypes.number.isRequired,
     onRequestSort: PropTypes.func.isRequired,
-    onSelectAllClick: PropTypes.func.isRequired,
     order: PropTypes.oneOf(['asc', 'desc']).isRequired,
     orderBy: PropTypes.string.isRequired,
     rowCount: PropTypes.number.isRequired,
@@ -231,6 +235,8 @@ export default function EnhancedTable(props) {
         <Box sx={{ width: '100%' }}>
             <Paper sx={{ width: '100%', mb: 2 }}>
                 {/*<EnhancedTableToolbar numSelected={selected.length} />*/}
+                {/* Add Padding */}
+
                 <TableContainer>
                     <Table
                         sx={{ minWidth: 750 }}
@@ -249,34 +255,27 @@ export default function EnhancedTable(props) {
                             {rows.slice().sort(getComparator(order, orderBy))
                                 .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                                 .map((row, index) => {
-                                    const labelId = `enhanced-table-checkbox-${index}`;
+                                    // const labelId = `enhanced-table-checkbox-${index}`;
 
                                     return (
                                         <TableRow
                                             hover
-                                            role="checkbox"
-                                            tabIndex={-1}
-                                            key={row.name}
+                                            tabIndex={0}
+                                            key={row.method}
+                                            minWidth={1600}
                                         >
-                                            <TableCell
-                                                component="th"
-                                                id={labelId}
-                                                scope="row"
-                                                padding="none"
-                                            >
-                                                {row.name}
-                                            </TableCell>
-                                            <TableCell align="right">{row.method}</TableCell>
+                                            <TableCell align="right">{index+1}</TableCell>
+                                            <TableCell align="left">{row.method}</TableCell>
                                             <TableCell align="right">{row.acc}</TableCell>
                                             <TableCell align="right">{row.acc_std}</TableCell>
                                             <TableCell align="right">{row.auc}</TableCell>
                                             <TableCell align="right">{row.auc_std}</TableCell>
-                                            <TableCell align="right">
+                                            <TableCell align="left">
                                                 <a href={row.ref_link}>
                                                     Link
                                                 </a>
                                             </TableCell>
-                                            <TableCell align="right">{row.date}</TableCell>
+                                            <TableCell align="left">{row.date}</TableCell>
                                         </TableRow>
                                     );
                                 })}
@@ -286,7 +285,7 @@ export default function EnhancedTable(props) {
                                         height: (dense ? 33 : 53) * emptyRows,
                                     }}
                                 >
-                                    <TableCell colSpan={6} />
+                                    <TableCell colSpan={7} />
                                 </TableRow>
                             )}
                         </TableBody>

@@ -1,9 +1,14 @@
 import React from 'react'
-import { Container, Divider, Grow, Grid } from '@mui/material'
-import EnhancedTable from '../components/leaderboard'
-import PersonCard from '../components/PersonCard'
+import { Container, Divider } from '@mui/material'
+import EnhancedTable, { createData } from '../components/leaderboard'
 
-const TeamPage = () => {
+const LeaderBoardsPage = () => {
+    const [rows, setRows] = React.useState(
+        [
+            createData("Test", 0.92, 0.01, 0.83, 0.03, "", "Feb 22, 2022")
+        ]
+    )
+
   return (
     <Container style={
         {
@@ -13,8 +18,7 @@ const TeamPage = () => {
             flexDirection: 'column',
         }
     }>
-        <h1 style={{padding: '20px'}}>Team</h1>
-        {/*  Horizontal align PersonCard */}
+        <h1 style={{padding: '20px'}}>Leaderboards</h1>
 
         <Divider style={
             {
@@ -24,10 +28,10 @@ const TeamPage = () => {
             }
         }/>
 
-        <EnhancedTable/>
+        <EnhancedTable rows={rows}/>
 
     </Container>
   )
 }
 
-export default TeamPage
+export default LeaderBoardsPage

@@ -7,7 +7,6 @@ import {
 } from '@mui/material'
 import { StyledEngineProvider } from '@mui/material/styles'
 import React from 'react'
-import LogoIcon from './LogoIcon'
 import CSLogoIcon from "./CSLogoIcon";
 import { ThemeProvider } from '@mui/styles'
 import { Helmet } from 'react-helmet'
@@ -56,6 +55,9 @@ export const Root = ({ element }) => {
               </Button>
               <Button color="inherit" href="/datasets">
                 Datasets
+              </Button>
+              <Button color="inherit" href="/leaderboards">
+                Leaderboard
               </Button>
               <Button color="inherit" href="/team">
                 team
