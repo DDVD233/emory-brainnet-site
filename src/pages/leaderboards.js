@@ -29,12 +29,12 @@ const LeaderBoardsPage = () => {
             flexDirection: 'column',
         }
     }>
-        <h1 style={{padding: '20px'}}>Leaderboards</h1>
+        <h1 style={{padding: '50px'}}>Leaderboards</h1>
 
         <Divider style={
             {
                 width: '100%',
-                marginTop: '50px',
+                marginTop: '10px',
                 marginBottom: '50px',
             }
         }/>
