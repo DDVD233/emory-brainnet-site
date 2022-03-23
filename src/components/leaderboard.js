@@ -16,6 +16,7 @@ import Paper from '@mui/material/Paper';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
 import { visuallyHidden } from '@mui/utils';
+import {ToggleButtonGroup, ToggleButton, Divider} from "@mui/material";
 
 export function createData(method, acc, acc_std, auc, auc_std, ref_link, date) {
     return { method, acc, acc_std, auc, auc_std, ref_link, date };
@@ -207,6 +208,7 @@ export default function EnhancedTable(props) {
     const [dense, setDense] = React.useState(false);
     const [rowsPerPage, setRowsPerPage] = React.useState(5);
     const [rows, setRows] = React.useState(props.rows);
+    const [dataset, setDataset] = React.useState("HIV");
 
     const handleRequestSort = (event, property) => {
         const isAsc = orderBy === property && order === 'asc';
@@ -227,6 +229,11 @@ export default function EnhancedTable(props) {
         setDense(event.target.checked);
     };
 
+    const handleDatasetChange = (event) => {
+        setDataset(event.target.value);
+        setRows(props.rows);
+    };
+
     // Avoid a layout jump when reaching the last page with empty rows.
     const emptyRows =
         page > 0 ? Math.max(0, (1 + page) * rowsPerPage - rows.length) : 0;
@@ -238,6 +245,22 @@ export default function EnhancedTable(props) {
                 {/* Add Padding */}
 
                 <TableContainer>
+                    {/* Center button group*/}
+                    <ToggleButtonGroup
+                        color="primary"
+                        value={dataset}
+                        exclusive
+                        onChange={handleDatasetChange}
+                        style={{ margin: '10px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+                    >
+                        <ToggleButton value="HIV">HIV</ToggleButton>
+                        <ToggleButton value="PNC">PNC</ToggleButton>
+                        <ToggleButton value="PPMI">PPMI</ToggleButton>
+                        <ToggleButton value="ABCD">ABCD</ToggleButton>
+                    </ToggleButtonGroup>
+
+                    <Divider />
+
                     <Table
                         sx={{ minWidth: 750 }}
                         aria-labelledby="tableTitle"
