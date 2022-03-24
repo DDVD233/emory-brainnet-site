@@ -50,6 +50,9 @@ export const Root = ({ element }) => {
               <Button color="inherit" href="/get-started">
                 Get Started
               </Button>
+              <Button color="inherit" href="/advanced">
+                Advanced
+              </Button>
               <Button color="inherit" href="/instructions">
                 Instructions
               </Button>
