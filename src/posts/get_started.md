@@ -1,5 +1,5 @@
 
-![BrainGB](images/braingb_logo.png)
+[//]: # (<img src="images/braingb_logo.png" width="100%" alt="BrainGB">)
 
 # Get Started
 
