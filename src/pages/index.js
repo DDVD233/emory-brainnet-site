@@ -35,16 +35,18 @@ const IndexPage = ({ data }) => {
   const classes = useStyles()
   return (
     <Grid
-      flexDirection="column"
+      direction='row'
       justifyContent="center"
-      spacing={2}
+      alignItems="stretch"
+      display="flex"
       container
     >
-      <Grid flexDirection={isSmallScreen ? "column" : "row"}
+      <Grid flexDirection="row"
+            justifyContent={'center'}
             display='flex' style={{ backgroundColor: '#f6fafd'}} container>
-        <Container item style={{width: isSmallScreen ? '60%': '30%', marginBottom: "20px", marginTop: "80px" }}>
+        <Grid item xs={8} sm={4} style={{ marginTop: "60px", marginBottom: "30px" }}>
           <img src={headerImage} alt="header"/>
-        </Container>
+        </Grid>
         <Grid
           item
           flexDirection="column"
@@ -52,16 +54,16 @@ const IndexPage = ({ data }) => {
           alignItems="left"
           display='flex'
           // spacing={3}
-          width={isSmallScreen ? '100%' : '55%'}
+          minWidth="500px"
           marginLeft="40px"
           marginBottom="80px"
-          spacing={0}
         >
           <Grid item style={{
             fontFamily: 'Courier New',
             fontWeight: 'bolder',
             fontSize: '100px',
             color: '#1e376d',
+            alignItems: 'flex-start',
           }}>
             <Typewriter
                 options={{
@@ -86,7 +88,7 @@ const IndexPage = ({ data }) => {
 
       <div style={{ height: "20px" }} />
 
-      <Grid item>
+      <Grid item style={{ margin: "50px" }}>
         <Container component="article" dangerouslySetInnerHTML={{
           __html: data.markdownRemark.html
         }}/>
