@@ -3,17 +3,109 @@ import {
   Button, Container,
   CssBaseline, Grid, IconButton,
   ScopedCssBaseline,
-  Toolbar, Typography
+  Toolbar, Typography, SwipeableDrawer, ListItem,
+  ListItemText, List
 } from '@mui/material'
 import { StyledEngineProvider } from '@mui/material/styles'
 import React from 'react'
 import CSLogoIcon from "./CSLogoIcon";
 import { ThemeProvider } from '@mui/styles'
 import { Helmet } from 'react-helmet'
+import { useMediaQuery } from 'react-responsive';
+import MenuIcon from '@mui/icons-material/Menu';
 
 import 'katex/dist/katex.min.css'
 import 'prismjs/themes/prism-solarizedlight.css'
 import theme from "../theme";
+
+const links = [
+  {
+    href: '/get-started',
+    label: 'Get Started',
+  },
+  {
+    href: '/advanced',
+    label: 'Advanced',
+  },
+  {
+    href: '/instructions',
+    label: 'Instructions',
+  },
+  {
+    href: '/datasets',
+    label: 'Datasets',
+  },
+  {
+    href: '/download',
+    label: 'Download',
+  },
+  {
+    href: '/leaderboards',
+    label: 'Leaderboards',
+  },
+  {
+    href: '/team',
+    label: 'Team',
+  }
+]
+
+function MainMenu() {
+  const isSmallScreen = useMediaQuery({ query: `(max-width: 760px)` });
+  const [open, setOpen] = React.useState(false);
+
+  const toggleDrawer = (open) => (event) => {
+    if (
+        event &&
+        event.type === 'keydown' &&
+        (event.key === 'Tab' || event.key === 'Shift')
+    ) {
+      return;
+    }
+
+    setOpen(open);
+  };
+
+
+  if (!isSmallScreen) {
+    return (
+        links.map(({ href, label }) => (
+            <Button color="inherit" href={href}>
+              {label}
+            </Button>
+    )))
+  } else {
+    return (
+        <React.Fragment>
+          <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              onClick={toggleDrawer(true)}
+          >
+            <MenuIcon/>
+          </IconButton>
+          <SwipeableDrawer
+              anchor={'right'}
+              open={open}
+              onClose={toggleDrawer(false)}
+              onOpen={toggleDrawer(true)}
+          >
+            <List>
+              {links.map(({ href, label }) => (
+                  <a href={href} style={{ color: '#696969'}}>
+                    <ListItem button key={label}>
+                      {/*<ListItemIcon>*/}
+                      {/*  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}*/}
+                      {/*</ListItemIcon>*/}
+                      <ListItemText primary={label} />
+                    </ListItem>
+                  </a>
+              ))}
+            </List>
+          </SwipeableDrawer>
+        </React.Fragment>
+    )
+  }
+}
 
 export const Root = ({ element }) => {
   return (
@@ -47,27 +139,7 @@ export const Root = ({ element }) => {
                 </Container>
               </IconButton>
               <Typography sx={{ flexGrow: 1 }}/>
-              <Button color="inherit" href="/get-started">
-                Get Started
-              </Button>
-              <Button color="inherit" href="/advanced">
-                Advanced
-              </Button>
-              <Button color="inherit" href="/instructions">
-                Instructions
-              </Button>
-              <Button color="inherit" href="/datasets">
-                Datasets
-              </Button>
-              <Button color="inherit" href="/download">
-                Download
-              </Button>
-              <Button color="inherit" href="/leaderboards">
-                Leaderboard
-              </Button>
-              <Button color="inherit" href="/team">
-                team
-              </Button>
+              <MainMenu/>
               </Grid>
             </Toolbar>
           </AppBar>
