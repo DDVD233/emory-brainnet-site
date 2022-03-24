@@ -42,7 +42,7 @@ const TeamPage = () => {
                 <PersonCard
                     name="Wei Dai"
                     email="wei.dai@emory.edu"
-                    photo=""
+                    photo="/people/WeiDai.png"
                     position="Emory University"
                     link={'https://dd.works/'}
                 />
