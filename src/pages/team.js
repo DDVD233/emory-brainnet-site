@@ -35,7 +35,7 @@ const TeamPage = () => {
                     name="Hejie Cui"
                     email="hejie.cui@emory.edu"
                     photo=""
-                    position="PhD Student in Computer Science"
+                    position="Emory University"
                     link={'https://hejiecui.com/'}
                 />
 
@@ -43,7 +43,7 @@ const TeamPage = () => {
                     name="Wei Dai"
                     email="wei.dai@emory.edu"
                     photo=""
-                    position="Bachelor Student in Computer Science and Mathematics"
+                    position="Emory University"
                     link={'https://dd.works/'}
                 />
 
@@ -51,7 +51,7 @@ const TeamPage = () => {
                     name="Yanqiao Zhu"
                     email="yanqiao.zhu@cripac.ia.ac.cn"
                     photo=""
-                    position="Master Student in Computer Science"
+                    position="UCLA"
                     link={'https://sxkdz.github.io/'}
                 />
 
@@ -59,7 +59,7 @@ const TeamPage = () => {
                     name="Xuan Kan"
                     email="xuan.kan@emory.edu"
                     photo=""
-                    position="PhD Student in Computer Science"
+                    position="Emory University"
                     link={'http://kanxuan.live/'}
                 />
 
@@ -67,7 +67,7 @@ const TeamPage = () => {
                     name="Antonio Aodong Chen Gu"
                     email="tony.chen.gu@emory.edu"
                     photo=""
-                    position="Bachelor Student in Computer Science"
+                    position="Emory University"
                     link={''}
                 />
 
@@ -75,7 +75,7 @@ const TeamPage = () => {
                     name="Joshua Lukemire"
                     email="joshua.lukemire@emory.edu"
                     photo=""
-                    position="PhD Student in Computer Science"
+                    position="Emory University"
                     link={''}
                 />
 
@@ -83,7 +83,7 @@ const TeamPage = () => {
                     name="Liang Zhan"
                     email="liang.zhan@pitt.edu"
                     photo=""
-                    position="Assistant Professor in EECS"
+                    position="University of Pittsburgh"
                     link={'https://www.engineeringx.pitt.edu/People/Faculty/Profiles/Liang-Zhan/'}
                 />
 
@@ -91,7 +91,7 @@ const TeamPage = () => {
                     name="Lifang He"
                     email="lih319@lehigh.edu"
                     photo=""
-                    position="Assistant Professor in Computer Science and Engineering"
+                    position="Lehigh University"
                     link={'https://engineering.lehigh.edu/faculty/lifang-he'}
                 />
 
@@ -99,7 +99,7 @@ const TeamPage = () => {
                     name="Ying Guo"
                     email="yguo2@emory.edu"
                     photo=""
-                    position="Professor in Biostatistics and Bioinformatics"
+                    position="Emory University"
                     link={'https://sph.emory.edu/faculty/profile/index.php?FID=ying-guo-629'}
                 />
 
@@ -107,7 +107,7 @@ const TeamPage = () => {
                     name="Carl Yang"
                     email="j.carlyang@emory.edu"
                     photo=""
-                    position="Assistant Professor in Computer Science"
+                    position="Emory University"
                     link="https://www.cs.emory.edu/~jyang71/"
                 />
             </Grid>
