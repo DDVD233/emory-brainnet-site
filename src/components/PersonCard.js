@@ -2,7 +2,7 @@ import {
     Paper, Avatar, Link
 } from '@mui/material'
 import React from "react";
-import {blue} from "@mui/material/colors";
+// import {blue} from "@mui/material/colors";
 
 // React Component: PersonCard
 // Type: Component
@@ -29,6 +29,7 @@ export default class PersonCard extends React.Component {
                 width: '300px',
                 alignItems: 'center',
                 display: 'flex',
+                marginBottom: '0px',
                 flexDirection: 'column',
             }}>
                 {/* Round profile photo */}
@@ -39,6 +40,11 @@ export default class PersonCard extends React.Component {
                         height: '150px',
                         fontSize: '70px',
                         bgcolor: '#1e376d',
+                    }}
+                    imgProps={{
+                        sx: {
+                            marginBottom: '0px',  // Fix the bottom margin = 1.16 rem bug
+                        }
                     }}
                 >
                 {/*    First letter of the first name and last name, font size 20 */}
