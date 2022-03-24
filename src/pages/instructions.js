@@ -7,14 +7,20 @@ const Instructions = ({ data }) => {
     function handleChange(event, newValue) {
         setArticle(newValue);
         if (newValue === "Structural") {
-            setHtml(data.allMarkdownRemark.edges[0].next.html)
+            setHtml(data.allMarkdownRemark.nodes
+                .filter(node => node.html.includes("Structural Brain Network"))[0].html
+            );
         } else {
-            setHtml(data.allMarkdownRemark.edges[0].node.html)
+            setHtml(data.allMarkdownRemark.nodes
+                .filter(node => node.html.includes("Functional Brain Network"))[0].html
+            );
         }
     }
 
     const [article, setArticle] = useState("Functional")
-    const [html, setHtml] = useState(data.allMarkdownRemark.edges[0].node.html)
+    const [html, setHtml] = useState(data.allMarkdownRemark.nodes
+        .filter(node => node.html.includes("Functional Brain Network"))[0].html
+    );
     return (
         <Container style={
             {
@@ -53,17 +59,12 @@ const Instructions = ({ data }) => {
 export default Instructions
 export const pageQuery = graphql`
     query FmriInstructionsPageQuery {
-            allMarkdownRemark(
+      allMarkdownRemark(
         filter: {fileAbsolutePath: {regex: "/posts/([a-z])+_instructions.md$/"}}
-          ) {
-            edges {
-              next {
-                html
-              }
-              node {
-                html
-              }
-            }
+      ) {
+        nodes {
+          html
+        }
       }
     }
 `

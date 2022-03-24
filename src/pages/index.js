@@ -3,36 +3,34 @@ import {
   Button,
   Container,
   Grid,
-  Typography,
-  useMediaQuery
 } from '@mui/material'
-import { makeStyles, useTheme } from '@mui/styles'
+// import { makeStyles } from '@mui/styles'
 import { graphql } from 'gatsby'
 import Typewriter from "typewriter-effect";
 
 import headerImage from '../images/header-image.svg'
 
-const headerHeight = '500px'
+// const headerHeight = '500px'
 
-const useStyles = makeStyles({
-  title: {
-    '&:after': {
-      content: '""',
-      position: 'absolute',
-      height: headerHeight,
-      width: '100%',
-      opacity: '.45',
-      // backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      backgroundColor: '#e3f2fd'
-    }
-  }
-})
+// const useStyles = makeStyles({
+//   title: {
+//     '&:after': {
+//       content: '""',
+//       position: 'absolute',
+//       height: headerHeight,
+//       width: '100%',
+//       opacity: '.45',
+//       // backgroundSize: 'cover',
+//       backgroundPosition: 'center',
+//       backgroundColor: '#e3f2fd'
+//     }
+//   }
+// })
 
 const IndexPage = ({ data }) => {
-  const theme = useTheme()
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'))
-  const classes = useStyles()
+  // const theme = useTheme()
+  // const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'))
+  // const classes = useStyles()
   return (
     <Grid
       direction='row'
