@@ -50,7 +50,7 @@ const TeamPage = () => {
                 <PersonCard
                     name="Yanqiao Zhu"
                     email="yanqiao.zhu@cripac.ia.ac.cn"
-                    photo=""
+                    photo="/people/YanqiaoZhu.jpg"
                     position="UCLA"
                     link={'https://sxkdz.github.io/'}
                 />
