@@ -52,7 +52,7 @@ const TeamPage = () => {
 
                 <ModelDownloadCard
                     name={'ABCD'}
-                    link={''}
+                    link={'https://firebasestorage.googleapis.com/v0/b/braingb-d2fc0.appspot.com/o/BrainGB_gat_ABCD.pt?alt=media&token=e26b33de-15c7-4071-8acc-9b8fc7e4cdb7'}
                     image={'/logo_abcd_r_small.jpg'}
                 />
             </Grid>
