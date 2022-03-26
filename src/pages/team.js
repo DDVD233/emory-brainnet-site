@@ -64,9 +64,9 @@ const TeamPage = () => {
                 />
 
                 <PersonCard
-                    name="Antonio Aodong Chen Gu"
+                    name="Tony Chen Gu"
                     email="tony.chen.gu@emory.edu"
-                    photo=""
+                    photo="/people/TonyChen.jpeg"
                     position="Emory University"
                     link={''}
                 />
@@ -98,7 +98,7 @@ const TeamPage = () => {
                 <PersonCard
                     name="Ying Guo"
                     email="yguo2@emory.edu"
-                    photo=""
+                    photo="/people/YingGuo.jpg"
                     position="Emory University"
                     link={'https://sph.emory.edu/faculty/profile/index.php?FID=ying-guo-629'}
                 />
@@ -106,7 +106,7 @@ const TeamPage = () => {
                 <PersonCard
                     name="Carl Yang"
                     email="j.carlyang@emory.edu"
-                    photo=""
+                    photo="/people/CarlYang.jpg"
                     position="Emory University"
                     link="https://www.cs.emory.edu/~jyang71/"
                 />
