@@ -59,7 +59,7 @@ export default class PersonCard extends React.Component {
                 <Link href={this.state.link} target="_blank" rel="noreferrer">
                     <h2>{this.state.name}</h2>
                 </Link>
-                <p>{this.state.email}</p>
+                {/*<p>{this.state.email}</p>*/}
                 <p align="center">{this.state.position}</p>
             </Paper>
         )

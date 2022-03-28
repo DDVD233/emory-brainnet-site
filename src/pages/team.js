@@ -33,7 +33,6 @@ const TeamPage = () => {
             <Grid container spacing={1} justifyContent={'center'}>
                 <PersonCard
                     name="Hejie Cui"
-                    email="hejie.cui@emory.edu"
                     photo="/people/HejieCui.jpeg"
                     position="Emory University"
                     link={'https://hejiecui.com/'}
@@ -41,7 +40,6 @@ const TeamPage = () => {
 
                 <PersonCard
                     name="Wei Dai"
-                    email="wei.dai@emory.edu"
                     photo="/people/WeiDai.png"
                     position="Emory University"
                     link={'https://dd.works/'}
@@ -49,7 +47,6 @@ const TeamPage = () => {
 
                 <PersonCard
                     name="Yanqiao Zhu"
-                    email="yanqiao.zhu@cripac.ia.ac.cn"
                     photo="/people/YanqiaoZhu.jpg"
                     position="UCLA"
                     link={'https://sxkdz.github.io/'}
@@ -57,7 +54,6 @@ const TeamPage = () => {
 
                 <PersonCard
                     name="Xuan Kan"
-                    email="xuan.kan@emory.edu"
                     photo="/people/XuanKan.jpeg"
                     position="Emory University"
                     link={'http://kanxuan.live/'}
@@ -65,7 +61,6 @@ const TeamPage = () => {
 
                 <PersonCard
                     name="Tony Chen Gu"
-                    email="tony.chen.gu@emory.edu"
                     photo="/people/TonyChen.jpeg"
                     position="Emory University"
                     link={''}
@@ -73,7 +68,6 @@ const TeamPage = () => {
 
                 <PersonCard
                     name="Joshua Lukemire"
-                    email="joshua.lukemire@emory.edu"
                     photo=""
                     position="Emory University"
                     link={''}
@@ -81,7 +75,6 @@ const TeamPage = () => {
 
                 <PersonCard
                     name="Liang Zhan"
-                    email="liang.zhan@pitt.edu"
                     photo="/people/LiangZhan.jpeg"
                     position="University of Pittsburgh"
                     link={'https://www.engineeringx.pitt.edu/People/Faculty/Profiles/Liang-Zhan/'}
@@ -89,7 +82,6 @@ const TeamPage = () => {
 
                 <PersonCard
                     name="Lifang He"
-                    email="lih319@lehigh.edu"
                     photo={'/people/LifangHe.jpg'}
                     position="Lehigh University"
                     link={'https://engineering.lehigh.edu/faculty/lifang-he'}
@@ -97,7 +89,6 @@ const TeamPage = () => {
 
                 <PersonCard
                     name="Ying Guo"
-                    email="yguo2@emory.edu"
                     photo="/people/YingGuo.jpg"
                     position="Emory University"
                     link={'https://sph.emory.edu/faculty/profile/index.php?FID=ying-guo-629'}
@@ -105,7 +96,6 @@ const TeamPage = () => {
 
                 <PersonCard
                     name="Carl Yang"
-                    email="j.carlyang@emory.edu"
                     photo="/people/CarlYang.jpg"
                     position="Emory University"
                     link="https://www.cs.emory.edu/~jyang71/"
