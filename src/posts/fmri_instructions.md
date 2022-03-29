@@ -39,6 +39,7 @@ The functional brain network construction is a BIDS-formatted fMRI data processi
 ## More Options
 
     ```shell
+    
     Positional Arguments:
         bids_dir                Path to the BIDS data.
 
