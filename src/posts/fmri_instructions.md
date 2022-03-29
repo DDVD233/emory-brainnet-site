@@ -89,4 +89,5 @@ The functional brain network construction is a BIDS-formatted fMRI data processi
 
         --ignore-expected-outputs
                                 Continue the pipeline with missing expected output.
+                                
     ```
