@@ -37,6 +37,7 @@ The functional brain network construction is a BIDS-formatted fMRI data processi
     ./abcd-hcp-pipeline.sif /bids_input /output --freesurfer-license=/opt/freesurfer/license.txt [OPTIONS]
     ```
 ## More Options
+
     ```shell
     Positional Arguments:
         bids_dir                Path to the BIDS data.
