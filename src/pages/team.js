@@ -68,7 +68,7 @@ const TeamPage = () => {
 
                 <PersonCard
                     name="Joshua Lukemire"
-                    photo=""
+                    photo="/people/JoshLukemire.jpeg"
                     position="Emory University"
                     link={''}
                 />

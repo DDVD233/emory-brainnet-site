@@ -88,3 +88,10 @@ The functional brain network construction is a BIDS-formatted fMRI data processi
         --ignore-expected-outputs
                                 Continue the pipeline with missing expected output.
     ```
+
+
+## References
+
+This work is based on the following publications:
+
+> Zhan, L., Zhou, J., Wang, Y., Jin, Y., Jahanshad, N., Prasad, G., ... & Alzheimer’s Disease Neuroimaging Initiative. (2015). Comparison of nine tractography algorithms for detecting abnormal structural brain networks in Alzheimer’s disease. Frontiers in aging neuroscience, 7, 48. [https://doi.org/10.3389/fnagi.2015.00048](https://doi.org/10.3389/fnagi.2015.00048)

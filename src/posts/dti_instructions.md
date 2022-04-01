@@ -116,3 +116,10 @@ Finally, we could get the brain network based on the registered brain tractograp
     % output files: .mat file containing constructed brain network martrix
     compute_matrix_Dec_11_2015('D:\ppmi\3101\dtk\dti_fact_tracts.trk','D:\ppmi\3101\label.nii','D:\ppmi\3101\3101.mat',5)
     ```
+
+
+## References
+
+This work is based on the following publications:
+
+> Zhan, L., Zhou, J., Wang, Y., Jin, Y., Jahanshad, N., Prasad, G., ... & Alzheimer’s Disease Neuroimaging Initiative. (2015). Comparison of nine tractography algorithms for detecting abnormal structural brain networks in Alzheimer’s disease. Frontiers in aging neuroscience, 7, 48. [https://doi.org/10.3389/fnagi.2015.00048](https://doi.org/10.3389/fnagi.2015.00048)
