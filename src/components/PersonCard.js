@@ -18,6 +18,7 @@ export default class PersonCard extends React.Component {
             email: this.props.email,
             position: this.props.position,
             link: this.props.link,
+            title: this.props.title,
         }
     }
 
@@ -60,6 +61,8 @@ export default class PersonCard extends React.Component {
                     <h2>{this.state.name}</h2>
                 </Link>
                 {/*<p>{this.state.email}</p>*/}
+                {/*Add title if it is given*/}
+                {this.state.title ? <p style={{marginBottom: "0px"}}>{this.state.title}</p> : null}
                 <p align="center">{this.state.position}</p>
             </Paper>
         )

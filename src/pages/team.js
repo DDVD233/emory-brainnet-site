@@ -97,6 +97,7 @@ const TeamPage = () => {
                 <PersonCard
                     name="Carl Yang"
                     photo="/people/CarlYang.jpg"
+                    title="Founding Director"
                     position="Emory University"
                     link="https://www.cs.emory.edu/~jyang71/"
                 />

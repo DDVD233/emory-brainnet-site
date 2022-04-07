@@ -122,4 +122,15 @@ Finally, we could get the brain network based on the registered brain tractograp
 
 This work is based on the following publications:
 
-> Zhan, L., Zhou, J., Wang, Y., Jin, Y., Jahanshad, N., Prasad, G., ... & Alzheimer’s Disease Neuroimaging Initiative. (2015). Comparison of nine tractography algorithms for detecting abnormal structural brain networks in Alzheimer’s disease. Frontiers in aging neuroscience, 7, 48. [https://doi.org/10.3389/fnagi.2015.00048](https://doi.org/10.3389/fnagi.2015.00048)
+```text
+@article{zhan2015comparison,
+title={Comparison of nine tractography algorithms for detecting abnormal structural brain networks in Alzheimer’s disease},
+author={Zhan, Liang and Zhou, Jiayu and Wang, Yalin and Jin, Yan and Jahanshad, Neda and Prasad, Gautam and Nir, Talia M and Leonardo, Cassandra D and Ye, Jieping and Thompson, Paul M and others},
+journal={Frontiers in aging neuroscience},
+volume={7},
+pages={48},
+year={2015},
+publisher={Frontiers}
+}
+```
+
