@@ -2,7 +2,6 @@ import React from 'react'
 import { Container, Divider, Grow, Grid } from '@mui/material'
 import PersonCard from '../components/PersonCard'
 import CbisLogo from '../images/CBIS_logo_blue.png'
-import CsLogo from '../images/logo_cs_blue.png'
 
 const TeamPage = () => {
   return (
@@ -117,7 +116,7 @@ const TeamPage = () => {
                    style={{ marginTop: '50px', justifyContent: 'center', display: 'flex' }}>
             <Container item xs={8} sm={4}>
                 <a href={'https://www.cs.emory.edu/home/'}>
-                    <img src={CsLogo} alt="CS"/>
+                    <img src="/EGM_Logo_full.png" alt="CS"/>
                 </a>
             </Container>
             <Container item xs={8} sm={3}>

@@ -1,11 +1,10 @@
 import React from 'react'
-import LogoSvg from '../images/logo_white.png'
 
 export const CSLogoIcon = (props) => {
     return (
         <img {...props} style={{
-            margin: 'auto'
-        }} alt="logo" src={LogoSvg}/>
+            margin: '5px'
+        }} alt="logo" src={"/EGM_Logo_transparent.png"}/>
     )
 }
 export default CSLogoIcon
