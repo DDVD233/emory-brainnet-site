@@ -123,6 +123,7 @@ export const Root = ({ element }) => {
           <link rel="stylesheet"
                 href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
           <meta name="viewport" content="initial-scale=1, width=device-width"/>
+          <title>BrainGB</title>
         </Helmet>
         <ScopedCssBaseline>
           <CssBaseline/>
