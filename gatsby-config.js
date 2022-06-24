@@ -10,7 +10,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        icon: 'src/images/emu-logo.svg'
+        icon: 'static/EGM_Logo_32.png'
       }
     },
     'gatsby-theme-material-ui',

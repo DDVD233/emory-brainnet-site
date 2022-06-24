@@ -28,16 +28,16 @@ const links = [
     label: 'Advanced',
   },
   {
-    href: '/instructions',
-    label: 'Instructions',
-  },
-  {
     href: '/datasets',
     label: 'Datasets',
   },
   {
-    href: '/download',
-    label: 'Download',
+    href: '/preprocessing',
+    label: 'Preprocessing',
+  },
+  {
+    href: '/models',
+    label: 'Models',
   },
   {
     href: '/leaderboards',
@@ -46,6 +46,10 @@ const links = [
   {
     href: '/team',
     label: 'Team',
+  },
+  {
+    href: 'https://brainnn.us',
+    label: 'Workshop',
   }
 ]
 

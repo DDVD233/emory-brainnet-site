@@ -3,7 +3,7 @@ import { Container, ToggleButton, ToggleButtonGroup} from '@mui/material'
 import { graphql } from 'gatsby'
 import { useState } from 'react';
 
-const Instructions = ({ data }) => {
+const Preprocessing = ({ data }) => {
     function handleChange(event, newValue) {
         setArticle(newValue);
         if (newValue === "Structural") {
@@ -56,7 +56,7 @@ const Instructions = ({ data }) => {
     )
 }
 
-export default Instructions
+export default Preprocessing
 export const pageQuery = graphql`
     query FmriInstructionsPageQuery {
       allMarkdownRemark(

@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Divider, Grow, Grid } from '@mui/material'
 import ModelDownloadCard from "../components/ModelDownloadCard";
 
-const TeamPage = () => {
+const Models = () => {
   return (
     <Container style={
         {
@@ -61,4 +61,4 @@ const TeamPage = () => {
   )
 }
 
-export default TeamPage
+export default Models
