@@ -8,18 +8,18 @@ const Preprocessing = ({ data }) => {
         setArticle(newValue);
         if (newValue === "Structural") {
             setHtml(data.allMarkdownRemark.nodes
-                .filter(node => node.html.includes("Structural Brain Network"))[0].html
+                .filter(node => node.html.includes("DTI Brain Network Construction"))[0].html
             );
         } else {
             setHtml(data.allMarkdownRemark.nodes
-                .filter(node => node.html.includes("Functional Brain Network"))[0].html
+                .filter(node => node.html.includes("fMRI Brain Network Construction"))[0].html
             );
         }
     }
 
     const [article, setArticle] = useState("Functional")
     const [html, setHtml] = useState(data.allMarkdownRemark.nodes
-        .filter(node => node.html.includes("Functional Brain Network"))[0].html
+        .filter(node => node.html.includes("fMRI Brain Network Construction"))[0].html
     );
     return (
         <Container style={

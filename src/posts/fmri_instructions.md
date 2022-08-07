@@ -1,11 +1,21 @@
-# Functional Brain Network Construction
-The functional brain network construction is a BIDS-formatted fMRI data processing pipeline for general researchers to build their own functional brain network from fMRI data.This pipeline is based on the [ABCD-HCP BIDS fMRI Pipeline](https://github.com/DCAN-Labs/abcd-hcp-pipeline).
+# fMRI Brain Network Construction
+
+The fmri brain network construction is a BIDS-formatted fMRI data processing pipeline for general researchers to build their own functional brain network from fMRI data. We use the existing [ABCD-HCP BIDS fMRI Pipeline](https://github.com/DCAN-Labs/abcd-hcp-pipeline), which combines complicated FSL, Freesurfer, and Linux commands into one docker command.
+### For structural data
+The pipeline uses `Freesurfer` to perform __brain extraction__, __slice-timing correction__, __motion correction__, __co-registration__, __normalization__, and __smoothing__.
+### For fMRI data
+It uses `FSL` to perform __slice-timing correction__, __motion correction__, __co-registration__, __normalization__, and __smoothing__.
+### For Network Consturction
+The pipeline also consists of `python scripts` to __parcel images__ and __construct networks__.
+
 ## Preparation:
 ### System requirement:
 - Linux or MacOS (Intel Core)
 ### Requirements
 - [Docker](https://docs.docker.com/get-docker/) or [Singularity](https://sylabs.io/guides/3.5/user-guide/quick_start.html)
+  - All tools used would be downloaded and configured inside of `Docker` and `Singularity`
 - [FreeSurfer license](https://surfer.nmr.mgh.harvard.edu/fswiki/License)
+- DICOM to NIFTI tools (eg. [MRIcroGL](https://www.nitrc.org/projects/mricrogl))
 
 ## Install the Pipeline
 - With Docker
@@ -19,7 +29,22 @@ The functional brain network construction is a BIDS-formatted fMRI data processi
     singularity build abcd-hcp-pipeline.sif docker://dcanumn/abcd-hcp-pipeline
     ```
 ## Run the Pipeline
-- The raw data should be in BIDS format
+- The raw data should be in BIDS format. Take the ABCD dataset as an example using the subject (NDARINV003RTV85)
+  1. Make sure you have access to ABCD data on [NDA](nda.nih.gov)
+  2. Create your own data package by following the numbers.
+     ![step1](./img/s1.jpg)
+     ![step2](./img/s2.png)
+     ![step3](./img/s3.png)
+     ![step4](./img/s4.png)
+  1. Using the [NDADownLoadManager](https://nda.nih.gov/static/docs/NDA_Download_Manager_User_Guide_v0.1.38.pdf) to download the raw T1 images (ABCD-T1-NORM_run-20181001100823) and processed fmri and T1 images.
+     ![step5](./img/s5.jpg)
+     ![step6](./img/s6.jpg)
+  1. The processed fmri and T1 images are already in BIDS format, so we could directly combine two folders.
+     ![step7](./img/tree1.jpg)
+  1. Extract the raw T1 image and convert it to .nii. Using any dcm to nii tools (eg. [MRIcroGL](https://www.nitrc.org/projects/mricrogl)) to convert the raw data (ABCD-T1-NORM_run-20181001100823) to nii.
+  2. We need its json file to supplement processed T1 json. Using the converted json to supplement the processed T1 json according to the following image.
+     ![step8](./img/json_conf.jpg)
+
 - With Docker
     ```shell
     docker run --rm \
@@ -36,8 +61,31 @@ The functional brain network construction is a BIDS-formatted fMRI data processi
     -B /path/to/freesurfer/license.txt:/opt/freesurfer/license.txt \
     ./abcd-hcp-pipeline.sif /bids_input /output --freesurfer-license=/opt/freesurfer/license.txt [OPTIONS]
     ```
+
+- My Docker command:
+    ```shell
+    docker run --rm \
+    -v /mnt/d/ABIDE/full_steps/subject_data_old:/bids_input:ro \
+    -v /mnt/d/ABIDE/full_steps/latest_output:/output \
+    -v /home/chentony2011/license.txt:/license \
+    dcanumn/abcd-hcp-pipeline /bids_input /output --freesurfer-license=/license --ncpus 15
+    ```
+
+- If you met error message like:
+    ```shell
+    Exception: error caught during stage: DCANBOLDProcessing
+    ```
+  try version v0.1.0 of the pipeline. With command `-stage DCANBOLDProcessing` to specify the starting stage.
+    ```shell
+    docker run --rm \
+    -v /mnt/d/ABIDE/full_steps/subject_data_old:/bids_input:ro \
+    -v /mnt/d/ABIDE/full_steps/latest_output:/output \
+    -v /home/chentony2011/license.txt:/license \
+    dcanumn/abcd-hcp-pipeline:v0.1.0 /bids_input /output --freesurfer-license=/license --ncpus 15 --stage DCANBOLDProcessing
+    ```
+
 ## More Options
-```shell
+    ```shell
     Positional Arguments:
         bids_dir                Path to the BIDS data.
 
@@ -86,19 +134,5 @@ The functional brain network construction is a BIDS-formatted fMRI data processi
         --print-commands-only   Only print out the command used to run each stage.
 
         --ignore-expected-outputs
-                                Continue the pipeline with missing expected output.                       
-```
-
-
-## References
-
-This tutorial is based on the following work:
-
-```
-@misc{dcan-labs, 
-title={DCAN-Labs/ABCD-HCP-pipeline: Bids application for processing functional MRI data, robust to scanner, acquisition and age variability.}, 
-url={https://github.com/DCAN-Labs/abcd-hcp-pipeline}, 
-journal={GitHub}, 
-author={DCAN-Labs}
-}
-```
+                                Continue the pipeline with missing expected output.
+    ```
