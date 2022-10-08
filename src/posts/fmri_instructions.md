@@ -1,6 +1,6 @@
 # fMRI Brain Network Construction
 
-The fmri brain network construction is a BIDS-formatted fMRI data processing pipeline for general researchers to build their own functional brain network from fMRI data. We use the existing [ABCD-HCP BIDS fMRI Pipeline](https://github.com/DCAN-Labs/abcd-hcp-pipeline), which combines complicated FSL, Freesurfer, and Linux commands into one docker command.
+The fmri brain network construction is a BIDS-formatted fMRI data processing pipeline for general researchers to build their own functional brain network from fMRI data. We use the existing [ABCD-HCP BIDS fMRI Pipeline](https://github.com/DCAN-Labs/abcd-hcp-pipeline), which combines complicated FSL, Freesurfer, and Linux commands into one docker command. The detailed pipeline description could be found at [ABCD-BIDS Community Collection (ABCC)](https://collection3165.readthedocs.io/en/stable/pipeline/).
 ### For structural data
 The pipeline uses `Freesurfer` to perform __brain extraction__, __slice-timing correction__, __motion correction__, __co-registration__, __normalization__, and __smoothing__.
 ### For fMRI data
