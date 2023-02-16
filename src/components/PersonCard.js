@@ -27,7 +27,7 @@ export default class PersonCard extends React.Component {
             <Paper style={{
                 margin: '10px',
                 padding: '10px',
-                width: '300px',
+                width: '200px',
                 alignItems: 'center',
                 display: 'flex',
                 marginBottom: '0px',
@@ -37,9 +37,9 @@ export default class PersonCard extends React.Component {
                 <Avatar
                     src={this.state.photo}
                     sx={{
-                        width: '150px',
-                        height: '150px',
-                        fontSize: '70px',
+                        width: '100px',
+                        height: '100px',
+                        fontSize: '50px',
                         bgcolor: '#1e376d',
                     }}
                     imgProps={{
