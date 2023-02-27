@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Divider, Grow, Grid } from '@mui/material'
 import PersonCard from '../components/PersonCard'
-import CbisLogo from '../images/CBIS_logo_blue.png'
+// import CbisLogo from '../images/CBIS_logo_blue.png'
 import {Helmet} from "react-helmet";
 
 const titleName = "BrainGB - Team"
@@ -37,17 +37,17 @@ const TeamPage = () => {
 
               <Grid container spacing={1} justifyContent={'center'}>
                   <PersonCard
-                      name="Liang Zhan"
-                      photo="/people/LiangZhan.jpeg"
-                      position="University of Pittsburgh"
-                      link={'https://www.engineeringx.pitt.edu/People/Faculty/Profiles/Liang-Zhan/'}
-                  />
-
-                  <PersonCard
                       name="Lifang He"
                       photo={'/people/LifangHe.jpg'}
                       position="Lehigh University"
                       link={'https://engineering.lehigh.edu/faculty/lifang-he'}
+                  />
+
+                  <PersonCard
+                      name="Liang Zhan"
+                      photo="/people/LiangZhan.jpeg"
+                      position="University of Pittsburgh"
+                      link={'https://www.engineeringx.pitt.edu/People/Faculty/Profiles/Liang-Zhan/'}
                   />
 
                   <PersonCard
