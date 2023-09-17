@@ -19,7 +19,7 @@ All source code is stored at [BrainGB's GitHub repository](https://github.com/He
 
 <h2 id="part-i-direct-experiments-with-braingb">Part I: Direct Experiments with BrainGB</h2>
 
-### **1. Obtaining Datasets**
+<h3 id="1-obtaining-datasets">1. Obtaining Datasets</h3>
 
 #### **ABIDE Dataset**
 We understand the challenges faced by researchers in accessing certain datasets due to restrictions. To facilitate your experimentation with BrainGB, we provide the [Autism Brain Imaging Data Exchange (ABIDE) dataset](http://fcon_1000.projects.nitrc.org/indi/abide/abide_I.html), which is publicly accessible and does not require special access permissions. 
@@ -39,7 +39,7 @@ You can also construct your own datasets by following the instructions on neuroi
 
 ---
 
-### **2. Quick Setup**
+<h3 id="2-quick-setup">2. Quick Setup</h3>
 
 Clone the repository and Install required dependencies:
 ```shell
@@ -69,7 +69,8 @@ h5py~=3.6.0
 
 ---
 
-### **3. Running Example**
+<h3 id="3-running-example">3. Running Example</h3>
+
 Use the ABIDE dataset as an example, you should first place the dataset file "abide.npy" (genereated from [step 1](#1-obtaining-datasets)) in the `datasets` folder under the `examples` folder (Create the folder if it does not exist). The `abide.npy` file contains the following contents:
 
 - **timeseries**: Represents the BOLD time series data for each subject. It's a numpy array with the shape (#sub, #ROI, #timesteps).
@@ -112,11 +113,9 @@ Done!
 ```
 
 ---
+<h2 id="part-ii-integrating-braingb-into-your-workflow">Part II: Integrating BrainGB into Your Workflow</h2>
 
-## **Part II: Integrating BrainGB into Your Workflow**
-
-### **1. Install BrainGB as a package**
-
+<h3 id="1-install-braingb-as-a-package">1. Install BrainGB as a package</h3>
 
 To integrate BrainGB into your research projects and leverage its capabilities, install the package via your package manager:
 
@@ -125,7 +124,7 @@ pip install BrainGB
 ```
 Notice that if you install the package through pip, the dependencies are automatically installed.
 
-### **2. Incorporating BrainGB Models**
+<h3 id="2-incorporating-braingb-models">2. Incorporating BrainGB Models</h3>
 
 BrainGB provides modular components, making it easier to integrate with various projects. Import the necessary modules and initialize the models according to your research needs.
 
