@@ -17,7 +17,7 @@ All source code is stored at [BrainGB's GitHub repository](https://github.com/He
 
 ---
 
-## **Part I: Direct Experiments with BrainGB**
+<h2 id="part-i-direct-experiments-with-braingb">Part I: Direct Experiments with BrainGB</h2>
 
 ### **1. Obtaining Datasets**
 
