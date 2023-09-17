@@ -7,7 +7,7 @@ Visit our BrainGB GitHub repository at [https://github.com/HennyJie/BrainGB](htt
 
 # Contribution
 
-We welcome any form of contribution from the community. Please feel free to email us.
+We welcome any form of contribution from the community. Please feel free to [email us](mailto:j.carlyang@emory.edu).
 
 # Citation
 
