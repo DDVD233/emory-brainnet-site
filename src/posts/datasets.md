@@ -30,16 +30,7 @@ The Human Connectome Project (HCP) data release encompasses high-resolution 3T M
 
 ## [Parkinson's Progression Markers Initiative (PPMI)](https://www.ppmi-info.org/)
 
-This dataset is from a collaborative study for Parkinson’s Research
-to improve PD therapeutics. We consider the DTI acquisition
-of 754 subjects, with 596 Parkinson’s disease patients and
-158 healthy controls. The raw data are first aligned to correct
-for head motion and eddy current distortions. Then the
-non-brain tissue is removed and the skull-stripped images
-are linearly aligned and registered. 84 ROIs are parcellated
-from T1-weighted structural MRI and the brain network is
-reconstructed using the deterministic 2nd-order Runge-Kutta
-(RK2) whole-brain tractography algorithm. 
+The Parkinson’s Progression Markers Initiative (PPMI) is a multi-center, longitudinal study dedicated to understanding the progression of Parkinson’s disease. Central to its efforts is a vast collection of neuroimaging data, which includes DTI, MRI, and PET scans. This data is derived from a diverse cohort of 3,810 subjects, broken down into 309 controls, 1,385 PD patients, 81 with SWEDD, 2,026 prodromal, and 9 AV133. Within this group, there are 1,768 females, 2,038 males, and 4 of unknown gender. By harnessing this extensive dataset, PPMI aims to identify crucial markers of disease progression, paving the way for more informed therapeutic interventions
 
 &nbsp;
 
